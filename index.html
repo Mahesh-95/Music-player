@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Music player</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+        <!--Music Player-->
+            <div class="col">
+                <div class="musicplayer">
+                <!--Music cover image-->
+                    <div class="image">
+                        <img id="thumbnail" width="340px" height="300px">
+                    </div>
+                    <!--Song title and Artist name-->
+                    <div id="songTitle"></div>
+                    <div id="songArtist"></div>
+                    <!--Progress bar-->
+                    <canvas id="progress" width="340px" height="4px"></canvas>
+                    <!--Audio Player-->
+                    <audio id="aud" ontimeupdate="updateBar()">
+                        <source id="source">
+                    </audio>
+                    <br>
+                    <!--Song timing-->>
+                    <span id="current-time"></span><span id="duration"></span>
+                    <br>
+                    <!--Volume-->
+                    <div class="sound" id="sound">
+                        <i class="fa fa-volume-down"></i>
+                        <input type="range" id="volumeSlider" min="0" max="1" step="0.01">
+                        <i class="fa fa-volume-up"></i>
+                    </div>
+                    <!--Audio control buttons-->
+                    <div class="but">
+                        <button id="volume"><i class="fa fa-volume-up"></i></button>
+                        <button id="prev"><i  class="fa fa-play"></i></button>
+                        <button id="play"><i class="fa fa-play-circle-o"></i></button>
+                        <button id="pause" ><i class="fa fa-pause-circle-o"></i></button>
+                        <button id="next"><i class="fa fa-play"></i></button>
+                        <button id="repeat" class="repeat"><i class="fa fa-repeat"></i></button>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="col">
+                <!--Music List-->
+                <div class="musiclisttab">
+                    <div class="heading">
+                        <h3>Music</h3>
+                    </div>
+                    <hr class="headhr">
+                    <div  id="musicbox">
+                        <!--Music info-->
+                        <div class="musicinfo">
+                            <div class="musicimg">
+                                <img src="images/cover1.png" >
+                            </div>
+                            <div class="songdetail">
+                                <h3 id="0">Don't Start Now</h3>
+                                <p id="0"> "Dua lipa"</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div  class="musicinfo">
+                            <div class="musicimg">
+                                <img src="images/cover2.png" >
+                            </div>
+                            <div class="songdetail">
+                                <h3 id="1">Bonbon</h3>
+                                <p id="1"> "Era Istrefi"</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div  class="musicinfo">
+                            <div class="musicimg">
+                                <img src="images/cover3.jpg" >
+                            </div>
+                            <div class="songdetail">
+                                <h3 id="2">Fractures</h3>
+                                <p id="2"> "Illenium"</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div  class="musicinfo">
+                            <div class="musicimg">
+                                <img src="images/cover4.png" >
+                            </div>
+                            <div class="songdetail">
+                                <h3 id="3">Marshmello ft. Bastille</h3>
+                                <p id="3"> "Artist"</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div  class="musicinfo">
+                            <div class="musicimg">
+                                <img src="images/cover5.jpg" >
+                            </div>
+                            <div class="songdetail">
+                                <h3 id="4">Stay</h3>
+                                <p id="4"> "Zedd & Alessia Cara"</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div  class="musicinfo">
+                            <div class="musicimg">
+                                <img src="images/cover6.jpg" >
+                            </div>
+                            <div class="songdetail">
+                                <h3 id="5">I Feel Like I'm Drowning</h3>
+                                <p id="5"> "Two Feet"</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div  class="musicinfo">
+                            <div class="musicimg">
+                                <img src="images/cover7.jpg" >
+                            </div>
+                            <div class="songdetail">
+                                <h3 id="6">Dance Monkey</h3>
+                                <p id="6"> "Tones and I"</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div  class="musicinfo">
+                            <div class="musicimg">
+                                <img src="images/cover8.png" >
+                            </div>
+                            <div class="songdetail">
+                                <h3 id="7">Con Calma</h3>
+                                <p id="7"> "Daddy Yankee & Snow"</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div  class="musicinfo">
+                            <div class="musicimg">
+                                <img src="images/cover9.jpg" >
+                            </div>
+                            <div class="songdetail">
+                                <h3 id="8">Eastside</h3>
+                                <p id="8"> "benny blanco, Halsey & Khalid"</p>
+                            </div>
+                        </div>
+                        <hr>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
