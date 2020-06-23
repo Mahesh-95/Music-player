@@ -158,7 +158,7 @@ input{
     padding:20px;
 }
 
-.musicbox::-webkit-scrollbar{
+#musicbox::-webkit-scrollbar{
     width: 0;
     background: transparent;
 }
